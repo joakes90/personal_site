@@ -1,0 +1,251 @@
+:root {
+	color-scheme: light dark;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	background: "#EFF1F7";
+	min-height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+
+nav li {
+	list-style: none;
+	padding: 0.66em;
+}
+
+nav li a {
+	color: white;
+	font-weight: 700;
+	opacity: 0.6;
+	text-decoration: none;
+	transition: 0.25s;
+	font-size: 0.80em;
+}
+
+nav li a:hover {
+	opacity: 1;
+}
+
+.selected {
+	opacity: 1;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	display: grid;
+	grid-template-areas:
+		"menu"
+		"content"
+		"footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: 
+		80px
+		800px
+		125px;
+}
+
+.content {
+	grid-area: content;
+	background: #f2f2f2
+}
+
+.about {
+	max-width: 960px;
+	margin: 16px;
+	text-align: center;	
+}
+
+.about-content h1 {
+	font-size: 2em;
+	font-weight: 300;
+	color: #373d46;
+}
+
+.about-content p {
+	font-weight: 300;
+	line-height: 1.8em;
+	color: #98a0ad;
+}
+
+.backgrounbd_image {
+	height: 256px;
+	width: 256px;
+}
+
+.menu {
+	display: flex;
+	grid-area: menu;
+	background: linear-gradient(to right,
+	rgba(249, 107, 142, 1),
+	rgba(218, 103, 230, 1),
+	rgba(130, 125, 253, 1));
+	justify-content: center;
+	width: 100%;
+
+}
+
+.footer {
+	grid-area: footer;
+	background: #f2f2f2;
+	font-size: 0.25em;
+	justify-content: center;
+}
+
+.fine-print {
+	text-align: center;
+}
+
+.footer
+.content,
+.menu
+.footer {
+	padding: 0;
+}
+
+.app_row {
+	height: 128px;
+	padding: 16px;
+	overflow: auto;
+	border-radius: 25px;
+}
+
+.app_row:hover {
+	background-color: rgba(0, 0, 0, 0.58)
+}
+
+.app_image {
+	height: 128px;
+	width: 128px;
+	float: left;
+	border-radius: 25px;
+}
+
+.app_name {
+	margin: 0;
+	margin-left: 144px;
+	font-weight: 300;
+	color: #373d46;
+}
+
+.app_discription {
+	margin: 0;
+	margin-left: 144px;
+	color: #373d46;
+	font-size: 0.5em;
+}
+
+@media (min-width: 800px) {
+	.container {
+		grid-template-areas: 
+			"menu content"
+			"menu footer";
+		grid-template-columns: 300px 1fr;
+		grid-template-rows: 1fr auto;
+	}
+	
+	nav ul {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	
+	.menu {
+		min-height: 100%;
+		background: linear-gradient(
+			rgba(249, 107, 142, 1),
+			rgba(218, 103, 230, 1),
+			rgba(130, 125, 254, 1));
+	}
+	
+	nav li a {
+	font-size: 1.5em;
+	}
+	
+	nav li {
+		padding: 1.5em;
+	}
+	
+	.app_row {
+		height: 250px;
+	}
+	
+	.app_image {
+		height: 250px;
+		width: 250px;
+	}
+	
+	.app_name {
+		margin-left: 266px;
+		font-size: 1.5em;
+	}
+	
+	.app_discription {
+		margin-left: 266px;
+		font-size: 1.0em;
+	}
+}
+
+/* Handel the iPhone SE */
+@media (max-width: 330px) {
+	nav li a {
+	font-size: 0.66em;
+}
+}
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #1e1e1e;
+	}
+	.content {
+		grid-area: content;
+		background: #1c1c1c;
+	}
+	.about-content h1 {
+		color: #71767c;
+	}
+
+	.about-content p {
+		color: #98a0ad;
+	}
+	
+	.menu {
+		display: flex;
+		grid-area: menu;
+		background: linear-gradient(
+		rgba(0, 78, 146, 1),
+		rgba(0, 4, 40, 1));
+		justify-content: center;
+	
+	}
+
+	.footer {
+		grid-area: footer;
+		background: #1e1e1e;
+		color: white;
+	}
+	
+	.app_name {
+	color: #71767c;
+	}
+
+	.app_discription {
+		color: #71767c;
+		}
+		
+	.app_row:hover {
+		background-color: rgba(106, 106, 106, 0.58)
+	}
+}
