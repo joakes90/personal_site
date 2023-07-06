@@ -54,13 +54,13 @@ nav li a:hover {
 	grid-template-columns: 1fr;
 	grid-template-rows: 
 		80px
-		800px
+		1080px
 		125px;
 }
 
 .content {
 	grid-area: content;
-	background: #f2f2f2
+	background: #f2f2f2;
 }
 
 .about {
@@ -82,17 +82,17 @@ nav li a:hover {
 }
 
 .backgrounbd_image {
-	height: 256px;
-	width: 256px;
+	height: 384px;
+	width: 384px;
 }
 
 .menu {
 	display: flex;
 	grid-area: menu;
 	background: linear-gradient(to right,
-	rgba(249, 107, 142, 1),
-	rgba(218, 103, 230, 1),
-	rgba(130, 125, 253, 1));
+	rgba(199, 199, 199, 1),
+	rgba(101, 101, 101, 1),
+	rgba(22, 22, 22, 1));
 	justify-content: center;
 	width: 100%;
 
@@ -117,7 +117,7 @@ nav li a:hover {
 }
 
 .app_row {
-	height: 128px;
+	height: 175px;
 	padding: 16px;
 	overflow: auto;
 	border-radius: 25px;
@@ -166,9 +166,9 @@ nav li a:hover {
 	.menu {
 		min-height: 100%;
 		background: linear-gradient(
-			rgba(249, 107, 142, 1),
-			rgba(218, 103, 230, 1),
-			rgba(130, 125, 254, 1));
+			rgba(199, 199, 199, 1),
+			rgba(101, 101, 101, 1),
+			rgba(22, 22, 22, 1));
 	}
 	
 	nav li a {
@@ -200,7 +200,7 @@ nav li a:hover {
 }
 
 /* Handel the iPhone SE */
-@media (max-width: 330px) {
+@media (max-width: 360px) {
 	nav li a {
 	font-size: 0.66em;
 }
